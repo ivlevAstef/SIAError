@@ -7,10 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A5483C2C1CF5D46C00F64B90 /* SampleErrors.m in Sources */ = {isa = PBXBuildFile; fileRef = A5483C2B1CF5D46C00F64B90 /* SampleErrors.m */; };
+		A5483C2D1CF5D51900F64B90 /* libSIAError.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5FF46671CEF4EFB005D9F45 /* libSIAError.a */; };
 		A5FF46561CEF4ED8005D9F45 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A5FF46551CEF4ED8005D9F45 /* main.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		A5483C271CF5D32300F64B90 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A5FF46621CEF4EFB005D9F45 /* SIAError.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = A5FF46291CEF4686005D9F45;
+			remoteInfo = SIAError;
+		};
 		A5FF46661CEF4EFB005D9F45 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = A5FF46621CEF4EFB005D9F45 /* SIAError.xcodeproj */;
@@ -33,6 +42,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A5483C2A1CF5D46C00F64B90 /* SampleErrors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SampleErrors.h; sourceTree = "<group>"; };
+		A5483C2B1CF5D46C00F64B90 /* SampleErrors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SampleErrors.m; sourceTree = "<group>"; };
 		A5FF46521CEF4ED8005D9F45 /* SIAErrorSample */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SIAErrorSample; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5FF46551CEF4ED8005D9F45 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A5FF46621CEF4EFB005D9F45 /* SIAError.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SIAError.xcodeproj; path = ../SIAError/SIAError.xcodeproj; sourceTree = "<group>"; };
@@ -43,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5483C2D1CF5D51900F64B90 /* libSIAError.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +82,8 @@
 			isa = PBXGroup;
 			children = (
 				A5FF46551CEF4ED8005D9F45 /* main.m */,
+				A5483C2A1CF5D46C00F64B90 /* SampleErrors.h */,
+				A5483C2B1CF5D46C00F64B90 /* SampleErrors.m */,
 			);
 			path = SIAErrorSample;
 			sourceTree = "<group>";
@@ -96,6 +110,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				A5483C281CF5D32300F64B90 /* PBXTargetDependency */,
 			);
 			name = SIAErrorSample;
 			productName = SIAErrorSample;
@@ -154,11 +169,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5483C2C1CF5D46C00F64B90 /* SampleErrors.m in Sources */,
 				A5FF46561CEF4ED8005D9F45 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A5483C281CF5D32300F64B90 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SIAError;
+			targetProxy = A5483C271CF5D32300F64B90 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		A5FF46571CEF4ED8005D9F45 /* Debug */ = {

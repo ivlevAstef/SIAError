@@ -10,6 +10,8 @@
 #import "SIAErrorLogger.h"
 #import <objc/runtime.h>
 
+typedef NSMutableSet<SIAErrorObserver*> SIAErrorObserverSet;
+
 @interface SIAErrorObserver ()
 
 @property (weak, nonatomic, nullable) id target;
@@ -38,7 +40,7 @@
         __strong __typeof__(self.target) strongTarget = strongSelf.target;
         if (nil != strongTarget && [strongTarget respondsToSelector:selector]) {
           
-          NSInvocation* invocation = [NSInvocation invocationWithMethodSignature:[[target class] instanceMethodSignatureForSelector:selector]];
+          NSInvocation* invocation = [NSInvocation invocationWithMethodSignature:[[strongTarget class] instanceMethodSignatureForSelector:selector]];
           if (nil != invocation) {
             [invocation setSelector:selector];
             [invocation setTarget:strongTarget];
@@ -85,20 +87,19 @@ static char sSIAErrorSubscriberAssociationKey = 0;
 @implementation SIAErrorObserver (LifeTime)
 
 - (void)retainToTarget {
-  NSMutableSet<SIAErrorObserver*>* associations = [self associations];
+  SIAErrorObserverSet* associations = [self associations];
   [associations addObject:self];
   
   [self setAssociations:associations];
-  
 }
 - (void)releaseFromTarget {
-  NSMutableSet<SIAErrorObserver*>* associations = [self associations];
+  SIAErrorObserverSet* associations = [self associations];
   [associations removeObject:self];
   [self setAssociations:associations];
 }
 
 //Private
-- (void)setAssociations:(nonnull NSMutableSet<SIAErrorObserver*>*)associations {
+- (void)setAssociations:(nonnull SIAErrorObserverSet*)associations {
   __strong __typeof__(self.target) strongTarget = self.target;
   if (nil == strongTarget) {
     SIAError_LogError(@"Can't find target for set association");
@@ -108,15 +109,15 @@ static char sSIAErrorSubscriberAssociationKey = 0;
   objc_setAssociatedObject(strongTarget, &sSIAErrorSubscriberAssociationKey, associations, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
-- (nonnull NSMutableSet<SIAErrorObserver*>*)associations {
+- (nonnull SIAErrorObserverSet*)associations {
   __strong __typeof__(self.target) strongTarget = self.target;
   
   if (nil == strongTarget) {
     SIAError_LogError(@"Can't find target for get association");
-    return [NSMutableSet set];
+    return [SIAErrorObserverSet set];
   }
   
-  return objc_getAssociatedObject(strongTarget, &sSIAErrorSubscriberAssociationKey) ?: [NSMutableSet set];
+  return objc_getAssociatedObject(strongTarget, &sSIAErrorSubscriberAssociationKey) ?: [SIAErrorObserverSet set];
 }
 
 @end

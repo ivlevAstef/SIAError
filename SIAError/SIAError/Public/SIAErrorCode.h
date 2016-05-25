@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+
 typedef NSNumber* SIAErrorCodeIdentifier;
 
 @interface SIAErrorCode : NSObject

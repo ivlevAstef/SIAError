@@ -68,19 +68,24 @@
 + (void)unsubscribe:(nonnull id<SIAErrorObserverIdentifier>)observer {
   SIAError_LogAssert([observer isKindOfClass:[SIAErrorObserver class]]);
   
-  [((SIAErrorObserver*)observer) releaseFromTarget];
+  [[self sharedErrorManager] removeObserver:(SIAErrorObserver*)observer];
 }
-
 
 + (void)notify:(nonnull SIAError*)error {
   SIAError_LogAssert(nil != error);
   
-  NSPointerArray* observers = [[self sharedErrorManager].observersMap objectForKey:error.code.identifier];
-  if (nil == observers) {
-    return;
+  NSArray* observersArr = nil;
+  @synchronized ([self sharedErrorManager].observersMap) {
+    NSPointerArray* observers = [[self sharedErrorManager].observersMap objectForKey:error.code.identifier];
+    if (nil == observers) {
+      return;
+    }
+    
+    observersArr = [observers allObjects];
   }
   
-  for (SIAErrorObserver* observer in [observers allObjects]) {
+  
+  for (SIAErrorObserver* observer in observersArr) {
     if([observer notify:error]) {
       break;
     }
@@ -134,16 +139,37 @@
   SIAError_LogAssert(nil != observer);
   SIAError_LogAssert(nil != code);
   
-  NSPointerArray* observers = [self.observersMap objectForKey:code.identifier];
-  if (nil == observers) {
-    [self.observersMap setObject:[NSPointerArray weakObjectsPointerArray] forKey:code.identifier];
-    observers = [self.observersMap objectForKey:code.identifier];
-    SIAError_LogAssert(nil != observers);
+  @synchronized (self.observersMap) {
+    NSPointerArray* observers = [self.observersMap objectForKey:code.identifier];
+    if (nil == observers) {
+      [self.observersMap setObject:[NSPointerArray weakObjectsPointerArray] forKey:code.identifier];
+      observers = [self.observersMap objectForKey:code.identifier];
+      SIAError_LogAssert(nil != observers);
+    }
+    
+    [observers addPointer:(__bridge void * _Nullable)(observer)];
+    [observers compact];//optimized
   }
   
-  [observers addPointer:(__bridge void * _Nullable)(observer)];
-  [observers compact];//optimized
   [observer retainToTarget];
+}
+
+
+- (void)removeObserver:(nonnull SIAErrorObserver*)observer {  
+  @synchronized (self.observersMap) {
+    for (NSPointerArray* observers in [self.observersMap allValues]) {
+      [observers compact];
+      
+      for(NSUInteger i = 0; i < observers.count; i++) {
+        if ([observers pointerAtIndex:i] == (__bridge void * _Nullable)(observer)) {
+          [observers removePointerAtIndex:i];
+          break;
+        }
+      }
+    }
+  }
+  [observer releaseFromTarget];
+  
 }
 
 @end
