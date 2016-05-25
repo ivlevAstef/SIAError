@@ -1,0 +1,332 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A5483C171CF586C800F64B90 /* SIAError.m in Sources */ = {isa = PBXBuildFile; fileRef = A5483C0F1CF586C800F64B90 /* SIAError.m */; };
+		A5483C181CF586C800F64B90 /* SIAErrorCode.m in Sources */ = {isa = PBXBuildFile; fileRef = A5483C101CF586C800F64B90 /* SIAErrorCode.m */; };
+		A5483C191CF586C800F64B90 /* SIAErrorCodes.m in Sources */ = {isa = PBXBuildFile; fileRef = A5483C111CF586C800F64B90 /* SIAErrorCodes.m */; };
+		A5483C1A1CF586C800F64B90 /* SIAErrorCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = A5483C121CF586C800F64B90 /* SIAErrorCollection.m */; };
+		A5483C1B1CF586C800F64B90 /* SIAErrorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A5483C131CF586C800F64B90 /* SIAErrorManager.m */; };
+		A5483C1C1CF586C800F64B90 /* SIAErrorObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = A5483C151CF586C800F64B90 /* SIAErrorObserver.m */; };
+		A5483C1D1CF586C800F64B90 /* SIAErrorThread.m in Sources */ = {isa = PBXBuildFile; fileRef = A5483C161CF586C800F64B90 /* SIAErrorThread.m */; };
+		A5483C1E1CF5875700F64B90 /* SIAErrorCode.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = A5483C081CF586C200F64B90 /* SIAErrorCode.h */; };
+		A5483C1F1CF5875700F64B90 /* SIAErrorCodes.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = A5483C091CF586C200F64B90 /* SIAErrorCodes.h */; };
+		A5483C201CF5875700F64B90 /* SIAError.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = A5483C071CF586C200F64B90 /* SIAError.h */; };
+		A5483C211CF5875700F64B90 /* SIAErrorCollection.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = A5483C0A1CF586C200F64B90 /* SIAErrorCollection.h */; };
+		A5483C221CF5875700F64B90 /* SIAErrorObserverIdentifier.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = A5483C0C1CF586C200F64B90 /* SIAErrorObserverIdentifier.h */; };
+		A5483C231CF5875700F64B90 /* SIAErrorManager.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = A5483C0B1CF586C200F64B90 /* SIAErrorManager.h */; };
+		A5483C241CF5875700F64B90 /* SIAErrorThread.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = A5483C0D1CF586C200F64B90 /* SIAErrorThread.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A5FF46281CEF4686005D9F45 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				A5483C1E1CF5875700F64B90 /* SIAErrorCode.h in CopyFiles */,
+				A5483C1F1CF5875700F64B90 /* SIAErrorCodes.h in CopyFiles */,
+				A5483C201CF5875700F64B90 /* SIAError.h in CopyFiles */,
+				A5483C211CF5875700F64B90 /* SIAErrorCollection.h in CopyFiles */,
+				A5483C221CF5875700F64B90 /* SIAErrorObserverIdentifier.h in CopyFiles */,
+				A5483C231CF5875700F64B90 /* SIAErrorManager.h in CopyFiles */,
+				A5483C241CF5875700F64B90 /* SIAErrorThread.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		A5483C071CF586C200F64B90 /* SIAError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SIAError.h; sourceTree = "<group>"; };
+		A5483C081CF586C200F64B90 /* SIAErrorCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SIAErrorCode.h; sourceTree = "<group>"; };
+		A5483C091CF586C200F64B90 /* SIAErrorCodes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SIAErrorCodes.h; sourceTree = "<group>"; };
+		A5483C0A1CF586C200F64B90 /* SIAErrorCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SIAErrorCollection.h; sourceTree = "<group>"; };
+		A5483C0B1CF586C200F64B90 /* SIAErrorManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SIAErrorManager.h; sourceTree = "<group>"; };
+		A5483C0C1CF586C200F64B90 /* SIAErrorObserverIdentifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SIAErrorObserverIdentifier.h; sourceTree = "<group>"; };
+		A5483C0D1CF586C200F64B90 /* SIAErrorThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SIAErrorThread.h; sourceTree = "<group>"; };
+		A5483C0F1CF586C800F64B90 /* SIAError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SIAError.m; sourceTree = "<group>"; };
+		A5483C101CF586C800F64B90 /* SIAErrorCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SIAErrorCode.m; sourceTree = "<group>"; };
+		A5483C111CF586C800F64B90 /* SIAErrorCodes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SIAErrorCodes.m; sourceTree = "<group>"; };
+		A5483C121CF586C800F64B90 /* SIAErrorCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SIAErrorCollection.m; sourceTree = "<group>"; };
+		A5483C131CF586C800F64B90 /* SIAErrorManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SIAErrorManager.m; sourceTree = "<group>"; };
+		A5483C141CF586C800F64B90 /* SIAErrorObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SIAErrorObserver.h; sourceTree = "<group>"; };
+		A5483C151CF586C800F64B90 /* SIAErrorObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SIAErrorObserver.m; sourceTree = "<group>"; };
+		A5483C161CF586C800F64B90 /* SIAErrorThread.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SIAErrorThread.m; sourceTree = "<group>"; };
+		A5FF462A1CEF4686005D9F45 /* libSIAError.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSIAError.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5FF466C1CF49EB3005D9F45 /* SIAErrorLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SIAErrorLogger.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A5FF46271CEF4686005D9F45 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A5483C061CF586C200F64B90 /* Public */ = {
+			isa = PBXGroup;
+			children = (
+				A5483C081CF586C200F64B90 /* SIAErrorCode.h */,
+				A5483C091CF586C200F64B90 /* SIAErrorCodes.h */,
+				A5483C071CF586C200F64B90 /* SIAError.h */,
+				A5483C0A1CF586C200F64B90 /* SIAErrorCollection.h */,
+				A5483C0C1CF586C200F64B90 /* SIAErrorObserverIdentifier.h */,
+				A5483C0B1CF586C200F64B90 /* SIAErrorManager.h */,
+				A5483C0D1CF586C200F64B90 /* SIAErrorThread.h */,
+			);
+			path = Public;
+			sourceTree = "<group>";
+		};
+		A5483C0E1CF586C800F64B90 /* Private */ = {
+			isa = PBXGroup;
+			children = (
+				A5483C0F1CF586C800F64B90 /* SIAError.m */,
+				A5483C101CF586C800F64B90 /* SIAErrorCode.m */,
+				A5483C111CF586C800F64B90 /* SIAErrorCodes.m */,
+				A5483C121CF586C800F64B90 /* SIAErrorCollection.m */,
+				A5483C131CF586C800F64B90 /* SIAErrorManager.m */,
+				A5483C141CF586C800F64B90 /* SIAErrorObserver.h */,
+				A5483C151CF586C800F64B90 /* SIAErrorObserver.m */,
+				A5483C161CF586C800F64B90 /* SIAErrorThread.m */,
+			);
+			path = Private;
+			sourceTree = "<group>";
+		};
+		A5FF46211CEF4686005D9F45 = {
+			isa = PBXGroup;
+			children = (
+				A5FF46371CEF484F005D9F45 /* SIAError */,
+				A5FF462B1CEF4686005D9F45 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A5FF462B1CEF4686005D9F45 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A5FF462A1CEF4686005D9F45 /* libSIAError.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A5FF46371CEF484F005D9F45 /* SIAError */ = {
+			isa = PBXGroup;
+			children = (
+				A5FF466B1CF49EB3005D9F45 /* Common */,
+				A5483C061CF586C200F64B90 /* Public */,
+				A5483C0E1CF586C800F64B90 /* Private */,
+			);
+			path = SIAError;
+			sourceTree = "<group>";
+		};
+		A5FF466B1CF49EB3005D9F45 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				A5FF466C1CF49EB3005D9F45 /* SIAErrorLogger.h */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A5FF46291CEF4686005D9F45 /* SIAError */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A5FF46331CEF4686005D9F45 /* Build configuration list for PBXNativeTarget "SIAError" */;
+			buildPhases = (
+				A5FF46261CEF4686005D9F45 /* Sources */,
+				A5FF46271CEF4686005D9F45 /* Frameworks */,
+				A5FF46281CEF4686005D9F45 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SIAError;
+			productName = SIAError;
+			productReference = A5FF462A1CEF4686005D9F45 /* libSIAError.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A5FF46221CEF4686005D9F45 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Alexander Ivlev";
+				TargetAttributes = {
+					A5FF46291CEF4686005D9F45 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+				};
+			};
+			buildConfigurationList = A5FF46251CEF4686005D9F45 /* Build configuration list for PBXProject "SIAError" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = A5FF46211CEF4686005D9F45;
+			productRefGroup = A5FF462B1CEF4686005D9F45 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A5FF46291CEF4686005D9F45 /* SIAError */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A5FF46261CEF4686005D9F45 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5483C1C1CF586C800F64B90 /* SIAErrorObserver.m in Sources */,
+				A5483C1B1CF586C800F64B90 /* SIAErrorManager.m in Sources */,
+				A5483C171CF586C800F64B90 /* SIAError.m in Sources */,
+				A5483C1D1CF586C800F64B90 /* SIAErrorThread.m in Sources */,
+				A5483C181CF586C800F64B90 /* SIAErrorCode.m in Sources */,
+				A5483C1A1CF586C800F64B90 /* SIAErrorCollection.m in Sources */,
+				A5483C191CF586C800F64B90 /* SIAErrorCodes.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		A5FF46311CEF4686005D9F45 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		A5FF46321CEF4686005D9F45 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A5FF46341CEF4686005D9F45 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		A5FF46351CEF4686005D9F45 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A5FF46251CEF4686005D9F45 /* Build configuration list for PBXProject "SIAError" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A5FF46311CEF4686005D9F45 /* Debug */,
+				A5FF46321CEF4686005D9F45 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A5FF46331CEF4686005D9F45 /* Build configuration list for PBXNativeTarget "SIAError" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A5FF46341CEF4686005D9F45 /* Debug */,
+				A5FF46351CEF4686005D9F45 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A5FF46221CEF4686005D9F45 /* Project object */;
+}
