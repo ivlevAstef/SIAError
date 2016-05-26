@@ -34,12 +34,11 @@
 
 
 @interface SIAErrorCodes : NSObject
+
++ (NSArray<SIAErrorCode*>*)Any;
++ (NSArray<SIAErrorCode*>*)AnyWithout:(NSArray<SIAErrorCode*>*)codes;
+
 @end
-
-#define SIA_DEFAULT_ERROR_CODES(X) \
-  X(Any, 0, @"")
-
-SIA_ERROR_CODES_INTERFACE(Default, SIA_DEFAULT_ERROR_CODES)
 
 
 /* Example:

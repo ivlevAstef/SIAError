@@ -8,6 +8,7 @@
 
 #import "SIAErrorManager.h"
 #import "SIAErrorObserver.h"
+#import "SIAErrorCodes.h"
 #import "SIAErrorLogger.h"
 
 @interface SIAErrorManager ()
@@ -72,24 +73,7 @@
 }
 
 + (void)notify:(nonnull SIAError*)error {
-  SIAError_LogAssert(nil != error);
-  
-  NSArray* observersArr = nil;
-  @synchronized ([self sharedErrorManager].observersMap) {
-    NSPointerArray* observers = [[self sharedErrorManager].observersMap objectForKey:error.code.identifier];
-    if (nil == observers) {
-      return;
-    }
-    
-    observersArr = [observers allObjects];
-  }
-  
-  
-  for (SIAErrorObserver* observer in observersArr) {
-    if([observer notify:error]) {
-      break;
-    }
-  }
+  [[self sharedErrorManager] notify:error];
 }
 
 + (void)notifyAll:(nonnull SIAErrorCollection*)collection {
@@ -168,8 +152,29 @@
       }
     }
   }
-  [observer releaseFromTarget];
   
+  [observer releaseFromTarget];
+}
+
+- (NSArray*)getObserversByCode:(nonnull SIAErrorCode*)code {
+  @synchronized (self.observersMap) {
+    NSPointerArray* observers = [self.observersMap objectForKey:code.identifier];
+    if (nil == observers) {
+      return [NSArray array];
+    }
+    
+    return [observers allObjects];
+  }
+}
+
+- (void)notify:(nonnull SIAError*)error {
+  SIAError_LogAssert(nil != error);
+  
+  for (SIAErrorObserver* observer in [self getObserversByCode:error.code]) {
+    if([observer notify:error]) {
+      break;
+    }
+  }
 }
 
 @end

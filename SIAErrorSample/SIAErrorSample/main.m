@@ -11,11 +11,11 @@
 #import "SIAError/SIAErrorManager.h"
 #import "SampleErrors.h"
 
-@interface SampleObserver : NSObject
+@interface SampleTarget : NSObject
 
 @end
 
-@implementation SampleObserver
+@implementation SampleTarget
 
 - (BOOL)sampleSelector:(nonnull SIAError*)error {
   NSLog(@"Receive selector error: %@", [error description]);
@@ -29,25 +29,28 @@
 
 @end
 
-id sampleSubscibeAndReturnUnsubscribeObserver() {
-  SampleObserver* mainTarget = [[SampleObserver alloc] init];
+SampleTarget* sampleSubscibeMain() {
+  SampleTarget* target = [[SampleTarget alloc] init];
   
-  NSArray* validErrorCodes = @[[SIAErrorCodes OtherError1], [SIAErrorCodes OtherError2], [SIAErrorCodes MainError]];
-  [SIAErrorManager subscibeToArray:validErrorCodes Target:mainTarget Callback:^BOOL(SIAError* _Nonnull error) {
+  [SIAErrorManager subscibeToArray:[SIAErrorCodes Any] Target:target Callback:^BOOL(SIAError* _Nonnull error) {
     NSLog(@"Main Receive callback error: %@", [error description]);
     return FALSE;
   }];
   
-  [SIAErrorManager subscibeToOne:[SIAErrorCodes MainError] Target:mainTarget Selector:@selector(sampleMainSelector:)];
+  [SIAErrorManager subscibeToOne:[SIAErrorCodes MainError] Target:target Selector:@selector(sampleMainSelector:)];
   
-  NSArray* validErrorCodes2 = @[[SIAErrorCodes OtherError2], [SIAErrorCodes MainError]];
-  return [SIAErrorManager subscibeToArray:validErrorCodes2 Target:mainTarget Selector:@selector(sampleMainSelector:)];
+  return target;
 }
 
-void sampleSubscribe() {
-  SampleObserver* target = [[SampleObserver alloc] init];
+id<SIAErrorObserverIdentifier> sampleObserverForUnbind(SampleTarget* target) {
+  NSArray* validErrorCodes2 = @[[SIAErrorCodes OtherError2], [SIAErrorCodes MainError]];
+  return [SIAErrorManager subscibeToArray:validErrorCodes2 Target:target Selector:@selector(sampleMainSelector:)];
+}
+
+SampleTarget* sampleSubscribe() {
+  SampleTarget* target = [[SampleTarget alloc] init];
   
-  NSArray* validErrorCodes = @[[SIAErrorCodes OtherError1], [SIAErrorCodes OtherError2]];
+  NSArray* validErrorCodes = [SIAErrorCodes AnyWithout:@[[SIAErrorCodes MainError]]];
   [SIAErrorManager subscibeToArray:validErrorCodes Target:target Callback:^BOOL(SIAError* _Nonnull error) {
     NSLog(@"Receive callback error: %@", [error description]);
     return FALSE;
@@ -55,11 +58,12 @@ void sampleSubscribe() {
   
   [SIAErrorManager subscibeToOne:[SIAErrorCodes OtherError2] Target:target Selector:@selector(sampleSelector:)];
   
-  NSArray* validErrorCodes2 = @[[SIAErrorCodes OtherError1], [SIAErrorCodes OtherError2], [SIAErrorCodes MainError]];
-  [SIAErrorManager subscibeToArray:validErrorCodes2 Target:target Callback:^BOOL(SIAError* _Nonnull error) {
+  [SIAErrorManager subscibeToArray:[SIAErrorCodes Any] Target:target Callback:^BOOL(SIAError* _Nonnull error) {
     NSLog(@"No Show because last method return TRUE.");
     return FALSE;
   }];
+  
+  return target;
 }
 
 void sampleCallNotify() {
@@ -77,12 +81,14 @@ void sampleCallNotify() {
 
 int main(int argc, const char * argv[]) {
   @autoreleasepool {
-    id observer = sampleSubscibeAndReturnUnsubscribeObserver();
+    SampleTarget* mainTarget = sampleSubscibeMain();
+    id<SIAErrorObserverIdentifier> observer = sampleObserverForUnbind(mainTarget);
+    
     __block SIAErrorCollection* mainCollection = nil;
     
     NSOperationQueue* queue = [NSOperationQueue new];
     [queue addOperationWithBlock:^{
-      sampleSubscribe();
+      SampleTarget* __attribute__((unused)) threadTarget = sampleSubscribe();
       
       [SIAErrorThread addError:[SIAError createByCode:[SIAErrorCodes OtherError1]]];
       [SIAErrorThread addError:[SIAError createByCode:[SIAErrorCodes OtherError2]]];
