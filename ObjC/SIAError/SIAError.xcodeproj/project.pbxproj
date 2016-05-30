@@ -7,20 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A5483C171CF586C800F64B90 /* SIAError.m in Sources */ = {isa = PBXBuildFile; fileRef = A5483C0F1CF586C800F64B90 /* SIAError.m */; };
-		A5483C181CF586C800F64B90 /* SIAErrorCode.m in Sources */ = {isa = PBXBuildFile; fileRef = A5483C101CF586C800F64B90 /* SIAErrorCode.m */; };
-		A5483C191CF586C800F64B90 /* SIAErrorCodes.m in Sources */ = {isa = PBXBuildFile; fileRef = A5483C111CF586C800F64B90 /* SIAErrorCodes.m */; };
-		A5483C1A1CF586C800F64B90 /* SIAErrorCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = A5483C121CF586C800F64B90 /* SIAErrorCollection.m */; };
-		A5483C1B1CF586C800F64B90 /* SIAErrorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A5483C131CF586C800F64B90 /* SIAErrorManager.m */; };
-		A5483C1C1CF586C800F64B90 /* SIAErrorObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = A5483C151CF586C800F64B90 /* SIAErrorObserver.m */; };
-		A5483C1D1CF586C800F64B90 /* SIAErrorThread.m in Sources */ = {isa = PBXBuildFile; fileRef = A5483C161CF586C800F64B90 /* SIAErrorThread.m */; };
-		A5483C1E1CF5875700F64B90 /* SIAErrorCode.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = A5483C081CF586C200F64B90 /* SIAErrorCode.h */; };
-		A5483C1F1CF5875700F64B90 /* SIAErrorCodes.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = A5483C091CF586C200F64B90 /* SIAErrorCodes.h */; };
-		A5483C201CF5875700F64B90 /* SIAError.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = A5483C071CF586C200F64B90 /* SIAError.h */; };
-		A5483C211CF5875700F64B90 /* SIAErrorCollection.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = A5483C0A1CF586C200F64B90 /* SIAErrorCollection.h */; };
-		A5483C221CF5875700F64B90 /* SIAErrorObserverIdentifier.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = A5483C0C1CF586C200F64B90 /* SIAErrorObserverIdentifier.h */; };
-		A5483C231CF5875700F64B90 /* SIAErrorManager.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = A5483C0B1CF586C200F64B90 /* SIAErrorManager.h */; };
-		A5483C241CF5875700F64B90 /* SIAErrorThread.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = A5483C0D1CF586C200F64B90 /* SIAErrorThread.h */; };
+		A5CCE8D31CFC182A00E6F83B /* SIAError.m in Sources */ = {isa = PBXBuildFile; fileRef = A5CCE8CB1CFC182A00E6F83B /* SIAError.m */; };
+		A5CCE8D41CFC182A00E6F83B /* SIAErrorCode.m in Sources */ = {isa = PBXBuildFile; fileRef = A5CCE8CC1CFC182A00E6F83B /* SIAErrorCode.m */; };
+		A5CCE8D51CFC182A00E6F83B /* SIAErrorCodes.m in Sources */ = {isa = PBXBuildFile; fileRef = A5CCE8CD1CFC182A00E6F83B /* SIAErrorCodes.m */; };
+		A5CCE8D61CFC182A00E6F83B /* SIAErrorCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = A5CCE8CE1CFC182A00E6F83B /* SIAErrorCollection.m */; };
+		A5CCE8D71CFC182A00E6F83B /* SIAErrorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A5CCE8CF1CFC182A00E6F83B /* SIAErrorManager.m */; };
+		A5CCE8D81CFC182A00E6F83B /* SIAErrorObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = A5CCE8D11CFC182A00E6F83B /* SIAErrorObserver.m */; };
+		A5CCE8D91CFC182A00E6F83B /* SIAErrorThread.m in Sources */ = {isa = PBXBuildFile; fileRef = A5CCE8D21CFC182A00E6F83B /* SIAErrorThread.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -30,36 +23,29 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
-				A5483C1E1CF5875700F64B90 /* SIAErrorCode.h in CopyFiles */,
-				A5483C1F1CF5875700F64B90 /* SIAErrorCodes.h in CopyFiles */,
-				A5483C201CF5875700F64B90 /* SIAError.h in CopyFiles */,
-				A5483C211CF5875700F64B90 /* SIAErrorCollection.h in CopyFiles */,
-				A5483C221CF5875700F64B90 /* SIAErrorObserverIdentifier.h in CopyFiles */,
-				A5483C231CF5875700F64B90 /* SIAErrorManager.h in CopyFiles */,
-				A5483C241CF5875700F64B90 /* SIAErrorThread.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		A5483C071CF586C200F64B90 /* SIAError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SIAError.h; sourceTree = "<group>"; };
-		A5483C081CF586C200F64B90 /* SIAErrorCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SIAErrorCode.h; sourceTree = "<group>"; };
-		A5483C091CF586C200F64B90 /* SIAErrorCodes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SIAErrorCodes.h; sourceTree = "<group>"; };
-		A5483C0A1CF586C200F64B90 /* SIAErrorCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SIAErrorCollection.h; sourceTree = "<group>"; };
-		A5483C0B1CF586C200F64B90 /* SIAErrorManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SIAErrorManager.h; sourceTree = "<group>"; };
-		A5483C0C1CF586C200F64B90 /* SIAErrorObserverIdentifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SIAErrorObserverIdentifier.h; sourceTree = "<group>"; };
-		A5483C0D1CF586C200F64B90 /* SIAErrorThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SIAErrorThread.h; sourceTree = "<group>"; };
-		A5483C0F1CF586C800F64B90 /* SIAError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SIAError.m; sourceTree = "<group>"; };
-		A5483C101CF586C800F64B90 /* SIAErrorCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SIAErrorCode.m; sourceTree = "<group>"; };
-		A5483C111CF586C800F64B90 /* SIAErrorCodes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SIAErrorCodes.m; sourceTree = "<group>"; };
-		A5483C121CF586C800F64B90 /* SIAErrorCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SIAErrorCollection.m; sourceTree = "<group>"; };
-		A5483C131CF586C800F64B90 /* SIAErrorManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SIAErrorManager.m; sourceTree = "<group>"; };
-		A5483C141CF586C800F64B90 /* SIAErrorObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SIAErrorObserver.h; sourceTree = "<group>"; };
-		A5483C151CF586C800F64B90 /* SIAErrorObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SIAErrorObserver.m; sourceTree = "<group>"; };
-		A5483C161CF586C800F64B90 /* SIAErrorThread.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SIAErrorThread.m; sourceTree = "<group>"; };
+		A5CCE8C11CFC182A00E6F83B /* SIAError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SIAError.h; sourceTree = "<group>"; };
+		A5CCE8C21CFC182A00E6F83B /* SIAErrorCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SIAErrorCode.h; sourceTree = "<group>"; };
+		A5CCE8C31CFC182A00E6F83B /* SIAErrorCodes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SIAErrorCodes.h; sourceTree = "<group>"; };
+		A5CCE8C41CFC182A00E6F83B /* SIAErrorCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SIAErrorCollection.h; sourceTree = "<group>"; };
+		A5CCE8C51CFC182A00E6F83B /* SIAErrorManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SIAErrorManager.h; sourceTree = "<group>"; };
+		A5CCE8C61CFC182A00E6F83B /* SIAErrorObserverIdentifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SIAErrorObserverIdentifier.h; sourceTree = "<group>"; };
+		A5CCE8C71CFC182A00E6F83B /* SIAErrorThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SIAErrorThread.h; sourceTree = "<group>"; };
+		A5CCE8CA1CFC182A00E6F83B /* SIAErrorLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SIAErrorLogger.h; sourceTree = "<group>"; };
+		A5CCE8CB1CFC182A00E6F83B /* SIAError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SIAError.m; sourceTree = "<group>"; };
+		A5CCE8CC1CFC182A00E6F83B /* SIAErrorCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SIAErrorCode.m; sourceTree = "<group>"; };
+		A5CCE8CD1CFC182A00E6F83B /* SIAErrorCodes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SIAErrorCodes.m; sourceTree = "<group>"; };
+		A5CCE8CE1CFC182A00E6F83B /* SIAErrorCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SIAErrorCollection.m; sourceTree = "<group>"; };
+		A5CCE8CF1CFC182A00E6F83B /* SIAErrorManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SIAErrorManager.m; sourceTree = "<group>"; };
+		A5CCE8D01CFC182A00E6F83B /* SIAErrorObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SIAErrorObserver.h; sourceTree = "<group>"; };
+		A5CCE8D11CFC182A00E6F83B /* SIAErrorObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SIAErrorObserver.m; sourceTree = "<group>"; };
+		A5CCE8D21CFC182A00E6F83B /* SIAErrorThread.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SIAErrorThread.m; sourceTree = "<group>"; };
 		A5FF462A1CEF4686005D9F45 /* libSIAError.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSIAError.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		A5FF466C1CF49EB3005D9F45 /* SIAErrorLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SIAErrorLogger.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,33 +59,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		A5483C061CF586C200F64B90 /* Public */ = {
+		A5CCE8C01CFC182A00E6F83B /* Headers */ = {
 			isa = PBXGroup;
 			children = (
-				A5483C081CF586C200F64B90 /* SIAErrorCode.h */,
-				A5483C091CF586C200F64B90 /* SIAErrorCodes.h */,
-				A5483C071CF586C200F64B90 /* SIAError.h */,
-				A5483C0A1CF586C200F64B90 /* SIAErrorCollection.h */,
-				A5483C0C1CF586C200F64B90 /* SIAErrorObserverIdentifier.h */,
-				A5483C0B1CF586C200F64B90 /* SIAErrorManager.h */,
-				A5483C0D1CF586C200F64B90 /* SIAErrorThread.h */,
+				A5CCE8C11CFC182A00E6F83B /* SIAError.h */,
+				A5CCE8C21CFC182A00E6F83B /* SIAErrorCode.h */,
+				A5CCE8C31CFC182A00E6F83B /* SIAErrorCodes.h */,
+				A5CCE8C41CFC182A00E6F83B /* SIAErrorCollection.h */,
+				A5CCE8C51CFC182A00E6F83B /* SIAErrorManager.h */,
+				A5CCE8C61CFC182A00E6F83B /* SIAErrorObserverIdentifier.h */,
+				A5CCE8C71CFC182A00E6F83B /* SIAErrorThread.h */,
 			);
-			path = Public;
+			path = Headers;
 			sourceTree = "<group>";
 		};
-		A5483C0E1CF586C800F64B90 /* Private */ = {
+		A5CCE8C81CFC182A00E6F83B /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				A5483C0F1CF586C800F64B90 /* SIAError.m */,
-				A5483C101CF586C800F64B90 /* SIAErrorCode.m */,
-				A5483C111CF586C800F64B90 /* SIAErrorCodes.m */,
-				A5483C121CF586C800F64B90 /* SIAErrorCollection.m */,
-				A5483C131CF586C800F64B90 /* SIAErrorManager.m */,
-				A5483C141CF586C800F64B90 /* SIAErrorObserver.h */,
-				A5483C151CF586C800F64B90 /* SIAErrorObserver.m */,
-				A5483C161CF586C800F64B90 /* SIAErrorThread.m */,
+				A5CCE8C91CFC182A00E6F83B /* Common */,
+				A5CCE8CB1CFC182A00E6F83B /* SIAError.m */,
+				A5CCE8CC1CFC182A00E6F83B /* SIAErrorCode.m */,
+				A5CCE8CD1CFC182A00E6F83B /* SIAErrorCodes.m */,
+				A5CCE8CE1CFC182A00E6F83B /* SIAErrorCollection.m */,
+				A5CCE8CF1CFC182A00E6F83B /* SIAErrorManager.m */,
+				A5CCE8D01CFC182A00E6F83B /* SIAErrorObserver.h */,
+				A5CCE8D11CFC182A00E6F83B /* SIAErrorObserver.m */,
+				A5CCE8D21CFC182A00E6F83B /* SIAErrorThread.m */,
 			);
-			path = Private;
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		A5CCE8C91CFC182A00E6F83B /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				A5CCE8CA1CFC182A00E6F83B /* SIAErrorLogger.h */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		A5FF46211CEF4686005D9F45 = {
@@ -121,19 +116,10 @@
 		A5FF46371CEF484F005D9F45 /* SIAError */ = {
 			isa = PBXGroup;
 			children = (
-				A5FF466B1CF49EB3005D9F45 /* Common */,
-				A5483C061CF586C200F64B90 /* Public */,
-				A5483C0E1CF586C800F64B90 /* Private */,
+				A5CCE8C01CFC182A00E6F83B /* Headers */,
+				A5CCE8C81CFC182A00E6F83B /* Sources */,
 			);
 			path = SIAError;
-			sourceTree = "<group>";
-		};
-		A5FF466B1CF49EB3005D9F45 /* Common */ = {
-			isa = PBXGroup;
-			children = (
-				A5FF466C1CF49EB3005D9F45 /* SIAErrorLogger.h */,
-			);
-			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,13 +178,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A5483C1C1CF586C800F64B90 /* SIAErrorObserver.m in Sources */,
-				A5483C1B1CF586C800F64B90 /* SIAErrorManager.m in Sources */,
-				A5483C171CF586C800F64B90 /* SIAError.m in Sources */,
-				A5483C1D1CF586C800F64B90 /* SIAErrorThread.m in Sources */,
-				A5483C181CF586C800F64B90 /* SIAErrorCode.m in Sources */,
-				A5483C1A1CF586C800F64B90 /* SIAErrorCollection.m in Sources */,
-				A5483C191CF586C800F64B90 /* SIAErrorCodes.m in Sources */,
+				A5CCE8D81CFC182A00E6F83B /* SIAErrorObserver.m in Sources */,
+				A5CCE8D71CFC182A00E6F83B /* SIAErrorManager.m in Sources */,
+				A5CCE8D31CFC182A00E6F83B /* SIAError.m in Sources */,
+				A5CCE8D91CFC182A00E6F83B /* SIAErrorThread.m in Sources */,
+				A5CCE8D41CFC182A00E6F83B /* SIAErrorCode.m in Sources */,
+				A5CCE8D61CFC182A00E6F83B /* SIAErrorCollection.m in Sources */,
+				A5CCE8D51CFC182A00E6F83B /* SIAErrorCodes.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

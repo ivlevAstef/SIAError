@@ -269,6 +269,7 @@
 		A5FF465A1CEF4ED8005D9F45 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = ../SIAError/SIAError/Headers/;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -276,6 +277,7 @@
 		A5FF465B1CEF4ED8005D9F45 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = ../SIAError/SIAError/Headers/;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

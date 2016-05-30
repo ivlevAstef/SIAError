@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "SIAError/SIAErrorCodes.h"
+#import "SIAErrorCodes.h"
 
 #define SAMPLE_ERRORS(X)                            \
   X(Undefined, 100, @"Undefined Text")              \

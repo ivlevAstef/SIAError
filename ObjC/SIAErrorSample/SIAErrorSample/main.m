@@ -7,8 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "SIAError/SIAErrorThread.h"
-#import "SIAError/SIAErrorManager.h"
+#import "SIAErrorThread.h"
+#import "SIAErrorManager.h"
 #import "SampleErrors.h"
 
 @interface SampleTarget : NSObject
